@@ -1,0 +1,74 @@
+[2015-06-03 06:28:49] requirements_debian_update_system
+requirements_debian_update_system () 
+{ 
+    __rvm_try_sudo apt-get --quiet --yes update || { 
+        \typeset __ret=$?;
+        case ${__ret} in 
+            100)
+                rvm_error "There has been error while updating 'apt-get', please give it some time and try again later.
+404 errors should be fixed for rvm to proceed. Check your sources configured in:
+    /etc/apt/sources.list
+    /etc/apt/sources.list.d/*.list
+"
+            ;;
+        esac;
+        return ${__ret}
+    }
+}
+current path: /home/vagrant/.rvm/src/rvm
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/vagrant/.rvm/bin
+command(2): requirements_debian_update_system ruby-2.2.1
+++ /scripts/functions/requirements/ubuntu : requirements_debian_update_system()  41 > __rvm_try_sudo apt-get --quiet --yes update
+++ /scripts/functions/utility : __rvm_try_sudo()  343 > typeset -a command_to_run
+++ /scripts/functions/utility : __rvm_try_sudo()  344 > typeset sudo_path sbin_path missing_paths
+++ /scripts/functions/utility : __rvm_try_sudo()  345 > command_to_run=("$@")
+++ /scripts/functions/utility : __rvm_try_sudo()  346 > ((  UID == 0  ))
+++ /scripts/functions/utility : __rvm_try_sudo()  347 > case "$rvm_autolibs_flag_number" in
+++ /scripts/functions/utility : __rvm_try_sudo()  362 > is_a_function __rvm_sudo
+++ /scripts/functions/support : is_a_function()  5 > typeset -f __rvm_sudo
+++ /scripts/functions/utility : __rvm_try_sudo()  364 > missing_paths=
+++ /scripts/functions/utility : __rvm_try_sudo()  365 > for sbin_path in /sbin /usr/sbin /usr/local/sbin
+++ /scripts/functions/utility : __rvm_try_sudo()  367 > [[ -d /sbin ]]
+++ /scripts/functions/utility : __rvm_try_sudo()  367 > [[ :/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/vagrant/.rvm/bin: != *\:\/\s\b\i\n\:* ]]
+++ /scripts/functions/utility : __rvm_try_sudo()  365 > for sbin_path in /sbin /usr/sbin /usr/local/sbin
+++ /scripts/functions/utility : __rvm_try_sudo()  367 > [[ -d /usr/sbin ]]
+++ /scripts/functions/utility : __rvm_try_sudo()  367 > [[ :/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/vagrant/.rvm/bin: != *\:\/\u\s\r\/\s\b\i\n\:* ]]
+++ /scripts/functions/utility : __rvm_try_sudo()  365 > for sbin_path in /sbin /usr/sbin /usr/local/sbin
+++ /scripts/functions/utility : __rvm_try_sudo()  367 > [[ -d /usr/local/sbin ]]
+++ /scripts/functions/utility : __rvm_try_sudo()  367 > [[ :/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/vagrant/.rvm/bin: != *\:\/\u\s\r\/\l\o\c\a\l\/\s\b\i\n\:* ]]
+++ /scripts/functions/utility : __rvm_try_sudo()  371 > [[ -n '' ]]
+++ /scripts/functions/utility : __rvm_try_sudo()  374 > command_to_run=(__rvm_sudo -p "%p password required for '$*': " "${command_to_run[@]}")
+++ /scripts/functions/utility : __rvm_try_sudo()  381 > __rvm_sudo -p '%p password required for '\''apt-get --quiet --yes update'\'': ' apt-get --quiet --yes update
+++ /scripts/functions/support : __rvm_sudo()  357 > command sudo -p '%p password required for '\''apt-get --quiet --yes update'\'': ' apt-get --quiet --yes update
+++ /scripts/functions/support : __rvm_sudo()  357 > sudo -p '%p password required for '\''apt-get --quiet --yes update'\'': ' apt-get --quiet --yes update
+Ign http://archive.ubuntu.com trusty InRelease
+Ign http://security.ubuntu.com trusty-security InRelease
+Ign http://archive.ubuntu.com trusty-updates InRelease
+Get:1 http://security.ubuntu.com trusty-security Release.gpg [933 B]
+Hit http://archive.ubuntu.com trusty Release.gpg
+Get:2 http://archive.ubuntu.com trusty-updates Release.gpg [933 B]
+Get:3 http://security.ubuntu.com trusty-security Release [63.5 kB]
+Hit http://archive.ubuntu.com trusty Release
+Get:4 http://archive.ubuntu.com trusty-updates Release [63.5 kB]
+Hit http://archive.ubuntu.com trusty/main Sources
+Get:5 http://security.ubuntu.com trusty-security/main Sources [81.9 kB]
+Hit http://archive.ubuntu.com trusty/universe Sources
+Hit http://archive.ubuntu.com trusty/main amd64 Packages
+Hit http://archive.ubuntu.com trusty/universe amd64 Packages
+Hit http://archive.ubuntu.com trusty/main Translation-en
+Hit http://archive.ubuntu.com trusty/universe Translation-en
+Get:6 http://archive.ubuntu.com trusty-updates/main Sources [206 kB]
+Get:7 http://security.ubuntu.com trusty-security/universe Sources [25.2 kB]
+Get:8 http://security.ubuntu.com trusty-security/main amd64 Packages [273 kB]
+Get:9 http://security.ubuntu.com trusty-security/universe amd64 Packages [105 kB]
+Hit http://security.ubuntu.com trusty-security/main Translation-en
+Hit http://security.ubuntu.com trusty-security/universe Translation-en
+Get:10 http://archive.ubuntu.com trusty-updates/universe Sources [118 kB]
+Get:11 http://archive.ubuntu.com trusty-updates/main amd64 Packages [525 kB]
+Get:12 http://archive.ubuntu.com trusty-updates/universe amd64 Packages [282 kB]
+Hit http://archive.ubuntu.com trusty-updates/main Translation-en
+Hit http://archive.ubuntu.com trusty-updates/universe Translation-en
+Ign http://archive.ubuntu.com trusty/main Translation-en_US
+Ign http://archive.ubuntu.com trusty/universe Translation-en_US
+Fetched 1,745 kB in 36s (48.5 kB/s)
+Reading package lists...

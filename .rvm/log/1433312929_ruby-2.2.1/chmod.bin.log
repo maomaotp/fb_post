@@ -1,0 +1,25 @@
+[2015-06-03 06:34:47] __rvm_set_executable
+__rvm_set_executable () 
+{ 
+    for __file in "$@";
+    do
+        [[ -x "${__file}" ]] || chmod +x "${__file}";
+    done
+}
+current path: /home/vagrant/.rvm/src/ruby-2.2.1
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/vagrant/.rvm/bin
+command(8): __rvm_set_executable /home/vagrant/.rvm/rubies/ruby-2.2.1/bin/erb /home/vagrant/.rvm/rubies/ruby-2.2.1/bin/gem /home/vagrant/.rvm/rubies/ruby-2.2.1/bin/irb /home/vagrant/.rvm/rubies/ruby-2.2.1/bin/rake /home/vagrant/.rvm/rubies/ruby-2.2.1/bin/rdoc /home/vagrant/.rvm/rubies/ruby-2.2.1/bin/ri /home/vagrant/.rvm/rubies/ruby-2.2.1/bin/ruby
+++ /scripts/functions/gemset : __rvm_set_executable()  358 > for __file in '"$@"'
+++ /scripts/functions/gemset : __rvm_set_executable()  359 > [[ -x /home/vagrant/.rvm/rubies/ruby-2.2.1/bin/erb ]]
+++ /scripts/functions/gemset : __rvm_set_executable()  358 > for __file in '"$@"'
+++ /scripts/functions/gemset : __rvm_set_executable()  359 > [[ -x /home/vagrant/.rvm/rubies/ruby-2.2.1/bin/gem ]]
+++ /scripts/functions/gemset : __rvm_set_executable()  358 > for __file in '"$@"'
+++ /scripts/functions/gemset : __rvm_set_executable()  359 > [[ -x /home/vagrant/.rvm/rubies/ruby-2.2.1/bin/irb ]]
+++ /scripts/functions/gemset : __rvm_set_executable()  358 > for __file in '"$@"'
+++ /scripts/functions/gemset : __rvm_set_executable()  359 > [[ -x /home/vagrant/.rvm/rubies/ruby-2.2.1/bin/rake ]]
+++ /scripts/functions/gemset : __rvm_set_executable()  358 > for __file in '"$@"'
+++ /scripts/functions/gemset : __rvm_set_executable()  359 > [[ -x /home/vagrant/.rvm/rubies/ruby-2.2.1/bin/rdoc ]]
+++ /scripts/functions/gemset : __rvm_set_executable()  358 > for __file in '"$@"'
+++ /scripts/functions/gemset : __rvm_set_executable()  359 > [[ -x /home/vagrant/.rvm/rubies/ruby-2.2.1/bin/ri ]]
+++ /scripts/functions/gemset : __rvm_set_executable()  358 > for __file in '"$@"'
+++ /scripts/functions/gemset : __rvm_set_executable()  359 > [[ -x /home/vagrant/.rvm/rubies/ruby-2.2.1/bin/ruby ]]

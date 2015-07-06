@@ -1,0 +1,65 @@
+[2015-06-03 06:30:27] __rvm_package_extract
+__rvm_package_extract () 
+{ 
+    rvm_debug __rvm_package_extract:$#: "$@";
+    \typeset __tempdir __path __file __return;
+    __return=0;
+    __tempdir="$( TMPDIR="${rvm_tmp_path}" mktemp -d -t rvm-tmp.XXXXXXXXX )";
+    __rvm_package_extract_run "$1" "$__tempdir" || __return=$?;
+    if (( __return == 0 )); then
+        for __path in "$__tempdir"/*;
+        do
+            __file="${__path##*/}";
+            if [[ -n "${__file}" && -e "$2/${__file}" ]]; then
+                \command \rm -rf "$2/${__file}" || __return=$?;
+            fi;
+            \command \mv -f "${__path}" "$2/" || __return=$?;
+        done;
+    fi;
+    if [[ -n "$__tempdir" ]]; then
+        \command \rm -rf "$__tempdir";
+    fi;
+    return $__return
+}
+current path: /home/vagrant/.rvm/src
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/vagrant/.rvm/bin
+command(3): __rvm_package_extract /home/vagrant/.rvm/archives/ruby-2.2.1.tar.bz2 /home/vagrant/.rvm/tmp/rvm_src_5112
+++ /scripts/functions/utility_package : __rvm_package_extract()  69 > rvm_debug __rvm_package_extract:2: /home/vagrant/.rvm/archives/ruby-2.2.1.tar.bz2 /home/vagrant/.rvm/tmp/rvm_src_5112
+++ /scripts/functions/logging : rvm_debug()  144 > ((  0  ))
+++ /scripts/functions/logging : rvm_debug()  144 > return 0
+++ /scripts/functions/utility_package : __rvm_package_extract()  70 > typeset __tempdir __path __file __return
+++ /scripts/functions/utility_package : __rvm_package_extract()  71 > __return=0
++++ /scripts/functions/utility_package : __rvm_package_extract()  72 > TMPDIR=/home/vagrant/.rvm/tmp
++++ /scripts/functions/utility_package : __rvm_package_extract()  72 > mktemp -d -t rvm-tmp.XXXXXXXXX
+++ /scripts/functions/utility_package : __rvm_package_extract()  72 > __tempdir=/home/vagrant/.rvm/tmp/rvm-tmp.nnAW4rdlF
+++ /scripts/functions/utility_package : __rvm_package_extract()  73 > __rvm_package_extract_run /home/vagrant/.rvm/archives/ruby-2.2.1.tar.bz2 /home/vagrant/.rvm/tmp/rvm-tmp.nnAW4rdlF
+++ /scripts/functions/utility_package : __rvm_package_extract_run()  35 > [[    != *\ \-\-\n\o\-\s\a\m\e\-\o\w\n\e\r\ * ]]
+++ /scripts/functions/utility_package : __rvm_package_extract_run()  36 > __rvm_grep -- --no-same-owner
+++ /scripts/functions/support : __rvm_grep()  260 > GREP_OPTIONS=
+++ /scripts/functions/utility_package : __rvm_package_extract_run()  36 > __rvm_tar --help
+++ /scripts/functions/support : __rvm_grep()  260 > command grep -- --no-same-owner
+++ /scripts/functions/support : __rvm_grep()  260 > grep -- --no-same-owner
+++ /scripts/functions/utility_package : __rvm_package_extract_run()  38 > rvm_tar_options=--no-same-owner
+++ /scripts/functions/utility_package : __rvm_package_extract_run()  41 > [[ -d /home/vagrant/.rvm/tmp/rvm-tmp.nnAW4rdlF ]]
+++ /scripts/functions/utility_package : __rvm_package_extract_run()  42 > case "$1" in
+++ /scripts/functions/utility_package : __rvm_package_extract_run()  47 > [[ -n '' ]]
+++ /scripts/functions/utility_package : __rvm_package_extract_run()  49 > __rvm_tar xjf /home/vagrant/.rvm/archives/ruby-2.2.1.tar.bz2 -C /home/vagrant/.rvm/tmp/rvm-tmp.nnAW4rdlF --no-same-owner
+++ /scripts/functions/support : __rvm_tar()  277 > tar xjf /home/vagrant/.rvm/archives/ruby-2.2.1.tar.bz2 -C /home/vagrant/.rvm/tmp/rvm-tmp.nnAW4rdlF --no-same-owner
+++ /scripts/functions/utility_package : __rvm_package_extract_run()  62 > __rvm_fix_group_permissions /home/vagrant/.rvm/tmp/rvm-tmp.nnAW4rdlF/ruby-2.2.1
+++ /scripts/functions/utility_package : __rvm_fix_group_permissions()  6 > __rvm_grep g=rw
+++ /scripts/functions/utility_package : __rvm_fix_group_permissions()  6 > umask -S
+++ /scripts/functions/support : __rvm_grep()  260 > GREP_OPTIONS=
+++ /scripts/functions/support : __rvm_grep()  260 > command grep g=rw
+++ /scripts/functions/support : __rvm_grep()  260 > grep g=rw
+++ /scripts/functions/utility_package : __rvm_fix_group_permissions()  8 > chmod -R g+rwX /home/vagrant/.rvm/tmp/rvm-tmp.nnAW4rdlF/ruby-2.2.1
+++ /scripts/functions/utility_package : __rvm_package_extract()  75 > ((  __return == 0  ))
+++ /scripts/functions/utility_package : __rvm_package_extract()  77 > for __path in '"$__tempdir"/*'
+++ /scripts/functions/utility_package : __rvm_package_extract()  79 > __file=ruby-2.2.1
+++ /scripts/functions/utility_package : __rvm_package_extract()  81 > [[ -n ruby-2.2.1 ]]
+++ /scripts/functions/utility_package : __rvm_package_extract()  81 > [[ -e /home/vagrant/.rvm/tmp/rvm_src_5112/ruby-2.2.1 ]]
+++ /scripts/functions/utility_package : __rvm_package_extract()  85 > command mv -f /home/vagrant/.rvm/tmp/rvm-tmp.nnAW4rdlF/ruby-2.2.1 /home/vagrant/.rvm/tmp/rvm_src_5112/
+++ /scripts/functions/utility_package : __rvm_package_extract()  85 > mv -f /home/vagrant/.rvm/tmp/rvm-tmp.nnAW4rdlF/ruby-2.2.1 /home/vagrant/.rvm/tmp/rvm_src_5112/
+++ /scripts/functions/utility_package : __rvm_package_extract()  88 > [[ -n /home/vagrant/.rvm/tmp/rvm-tmp.nnAW4rdlF ]]
+++ /scripts/functions/utility_package : __rvm_package_extract()  89 > command rm -rf /home/vagrant/.rvm/tmp/rvm-tmp.nnAW4rdlF
+++ /scripts/functions/utility_package : __rvm_package_extract()  89 > rm -rf /home/vagrant/.rvm/tmp/rvm-tmp.nnAW4rdlF
+++ /scripts/functions/utility_package : __rvm_package_extract()  91 > return 0

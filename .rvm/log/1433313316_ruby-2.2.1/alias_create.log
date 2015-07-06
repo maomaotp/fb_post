@@ -1,0 +1,46 @@
+[2015-06-03 06:35:16] alias_create_execute
+alias_create_execute () 
+{ 
+    for _path in "$rvm_rubies_path" "$rvm_environments_path" "$rvm_wrappers_path";
+    do
+        if [[ -L "$_path/$alias_name" ]]; then
+            \command \rm -fv "$_path/$alias_name" || return $?;
+        fi;
+        \command \ln -fs "$_path/$rvm_ruby_string" "$_path/$alias_name" || return $?;
+    done;
+    __rvm_db_ "$rvm_path/config/alias" "$alias_name" "$rvm_ruby_string"
+}
+current path: /home/vagrant/.rvm/src/rvm
+GEM_HOME=/home/vagrant/.rvm/gems/ruby-2.2.1
+PATH=/home/vagrant/.rvm/gems/ruby-2.2.1/bin:/home/vagrant/.rvm/gems/ruby-2.2.1@global/bin:/home/vagrant/.rvm/rubies/ruby-2.2.1/bin:/home/vagrant/.rvm/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
+GEM_PATH=/home/vagrant/.rvm/gems/ruby-2.2.1:/home/vagrant/.rvm/gems/ruby-2.2.1@global
+command(1): alias_create_execute
++ /scripts/alias : alias_create_execute()  27 > for _path in '"$rvm_rubies_path"' '"$rvm_environments_path"' '"$rvm_wrappers_path"'
++ /scripts/alias : alias_create_execute()  29 > [[ -L /home/vagrant/.rvm/rubies/default ]]
++ /scripts/alias : alias_create_execute()  32 > command ln -fs /home/vagrant/.rvm/rubies/ruby-2.2.1 /home/vagrant/.rvm/rubies/default
++ /scripts/alias : alias_create_execute()  32 > ln -fs /home/vagrant/.rvm/rubies/ruby-2.2.1 /home/vagrant/.rvm/rubies/default
++ /scripts/alias : alias_create_execute()  27 > for _path in '"$rvm_rubies_path"' '"$rvm_environments_path"' '"$rvm_wrappers_path"'
++ /scripts/alias : alias_create_execute()  29 > [[ -L /home/vagrant/.rvm/environments/default ]]
++ /scripts/alias : alias_create_execute()  32 > command ln -fs /home/vagrant/.rvm/environments/ruby-2.2.1 /home/vagrant/.rvm/environments/default
++ /scripts/alias : alias_create_execute()  32 > ln -fs /home/vagrant/.rvm/environments/ruby-2.2.1 /home/vagrant/.rvm/environments/default
++ /scripts/alias : alias_create_execute()  27 > for _path in '"$rvm_rubies_path"' '"$rvm_environments_path"' '"$rvm_wrappers_path"'
++ /scripts/alias : alias_create_execute()  29 > [[ -L /home/vagrant/.rvm/wrappers/default ]]
++ /scripts/alias : alias_create_execute()  32 > command ln -fs /home/vagrant/.rvm/wrappers/ruby-2.2.1 /home/vagrant/.rvm/wrappers/default
++ /scripts/alias : alias_create_execute()  32 > ln -fs /home/vagrant/.rvm/wrappers/ruby-2.2.1 /home/vagrant/.rvm/wrappers/default
++ /scripts/alias : alias_create_execute()  35 > __rvm_db_ /home/vagrant/.rvm/config/alias default ruby-2.2.1
++ /scripts/functions/db : __rvm_db_()  78 > typeset __db __key __value
++ /scripts/functions/db : __rvm_db_()  79 > __db=/home/vagrant/.rvm/config/alias
++ /scripts/functions/db : __rvm_db_()  80 > __key=default
++ /scripts/functions/db : __rvm_db_()  81 > shift 2
++ /scripts/functions/db : __rvm_db_()  82 > __value=ruby-2.2.1
++ /scripts/functions/db : __rvm_db_()  83 > case "${__value}" in
++ /scripts/functions/db : __rvm_db_()  91 > __rvm_db_add /home/vagrant/.rvm/config/alias default ruby-2.2.1
++ /scripts/functions/db : __rvm_db_add()  59 > typeset __dir=/home/vagrant/.rvm/config
++ /scripts/functions/db : __rvm_db_add()  60 > [[ -f /home/vagrant/.rvm/config/alias ]]
++ /scripts/functions/db : __rvm_db_add()  61 > __rvm_db_remove /home/vagrant/.rvm/config/alias default
++ /scripts/functions/db : __rvm_db_remove()  50 > [[ -f /home/vagrant/.rvm/config/alias ]]
++ /scripts/functions/db : __rvm_db_remove()  52 > __rvm_sed -e '\#^default=# d' -e '/^$/d' /home/vagrant/.rvm/config/alias
++ /scripts/functions/support : __rvm_sed()  277 > sed -e '\#^default=# d' -e '/^$/d' /home/vagrant/.rvm/config/alias
++ /scripts/functions/db : __rvm_db_remove()  53 > command mv -f /home/vagrant/.rvm/config/alias.new /home/vagrant/.rvm/config/alias
++ /scripts/functions/db : __rvm_db_remove()  53 > mv -f /home/vagrant/.rvm/config/alias.new /home/vagrant/.rvm/config/alias
++ /scripts/functions/db : __rvm_db_add()  65 > printf '%b=%b\n' default ruby-2.2.1

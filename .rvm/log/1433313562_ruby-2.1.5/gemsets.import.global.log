@@ -1,0 +1,488 @@
+[2015-06-03 06:44:34] gemset_import_list
+gemset_import_list () 
+{ 
+    \typeset line;
+    for line in "$@";
+    do
+        gem_install $line || rvm_error "there was an error installing gem $line";
+    done
+}
+current path: /home/vagrant/.rvm/src/ruby-2.1.5
+GEM_HOME=/home/vagrant/.rvm/gems/ruby-2.1.5@global
+PATH=/home/vagrant/.rvm/gems/ruby-2.1.5@global/bin:/home/vagrant/.rvm/rubies/ruby-2.1.5/bin:/home/vagrant/.rvm/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
+GEM_PATH=/home/vagrant/.rvm/gems/ruby-2.1.5@global
+command(5): gemset_import_list gem-wrappers rubygems-bundler rake rvm
+++ typeset line
+++ for line in '"$@"'
+++ gem_install gem-wrappers
+++ typeset gem_name gem_version version_check
+++ gem_version=
+++ __rvm_parse_gems_args gem-wrappers
+++ typeset gem=gem-wrappers
+++ __rvm_string_match gem-wrappers '*.gem$'
+++ typeset _string
+++ _string=gem-wrappers
+++ shift
+++ ((  1  ))
+++ case "${_string}" in
+++ shift
+++ ((  0  ))
+++ return 1
+++ gem_name=gem-wrappers
+++ case "$gem" in
+++ [[ -z '' ]]
+++ __rvm_db gem_gem-wrappers_version gem_version
+++ typeset value key variable
+++ key=gem_gem-wrappers_version
+++ key=gem_gem-wrappers_version
+++ variable=gem_version
+++ value=
+++ [[ -f /home/vagrant/.rvm/user/db ]]
++++ __rvm_db_ /home/vagrant/.rvm/user/db gem_gem-wrappers_version
++++ typeset __db __key __value
++++ __db=/home/vagrant/.rvm/user/db
++++ __key=gem_gem-wrappers_version
++++ shift 2
++++ __value=
++++ case "${__value}" in
++++ __rvm_db_get /home/vagrant/.rvm/user/db gem_gem-wrappers_version
++++ [[ -f /home/vagrant/.rvm/user/db ]]
++++ __rvm_sed -n -e '\#^gem_gem-wrappers_version=# { s#^gem_gem-wrappers_version=##;; p; }' -e '/^$/d'
++++ sed -n -e '\#^gem_gem-wrappers_version=# { s#^gem_gem-wrappers_version=##;; p; }' -e '/^$/d'
+++ value=
+++ [[ -z '' ]]
+++ [[ -f /home/vagrant/.rvm/config/db ]]
++++ __rvm_db_ /home/vagrant/.rvm/config/db gem_gem-wrappers_version
++++ typeset __db __key __value
++++ __db=/home/vagrant/.rvm/config/db
++++ __key=gem_gem-wrappers_version
++++ shift 2
++++ __value=
++++ case "${__value}" in
++++ __rvm_db_get /home/vagrant/.rvm/config/db gem_gem-wrappers_version
++++ [[ -f /home/vagrant/.rvm/config/db ]]
++++ __rvm_sed -n -e '\#^gem_gem-wrappers_version=# { s#^gem_gem-wrappers_version=##;; p; }' -e '/^$/d'
++++ sed -n -e '\#^gem_gem-wrappers_version=# { s#^gem_gem-wrappers_version=##;; p; }' -e '/^$/d'
+++ value='>=1.2.7'
+++ [[ -n >=1.2.7 ]]
+++ [[ -n gem_version ]]
+++ eval 'gem_version='\''>=1.2.7'\'''
++++ gem_version='>=1.2.7'
+++ true
+++ ((  0 == 0  ))
+++ is_gem_installed
+++ typeset gem_spec
+++ gem_spec='gem '\''gem-wrappers'\'''
+++ [[ -n >=1.2.7 ]]
+++ gem_spec+=', '\''>=1.2.7'\'''
+++ version_check=1.2.7
+++ ls --color=auto -ld /home/vagrant/.rvm/gems/ruby-2.1.5@global/gems/gem-wrappers-1.2.7
+++ /home/vagrant/.rvm/rubies/ruby-2.1.5/bin/ruby -rrubygems -e 'gem '\''gem-wrappers'\'', '\''>=1.2.7'\'''
+++ return 1
+++ gem_install_force
+++ typeset __available_gem
+++ typeset -a install_params
+++ install_params=()
++++ tail -n 1
++++ ls --color=auto -v1 /home/vagrant/.rvm/gem-cache/gem-wrappers-1.2.7.gem
+++ __available_gem=/home/vagrant/.rvm/gem-cache/gem-wrappers-1.2.7.gem
+++ [[ -n /home/vagrant/.rvm/gem-cache/gem-wrappers-1.2.7.gem ]]
+++ install_params+=(--local)
+++ install_params+=(--no-ri --no-rdoc $rvm_gem_options)
+++ __rvm_log_command 'gem.install.gem-wrappers->=1.2.7' 'installing gem /home/vagrant/.rvm/gem-cache/gem-wrappers-1.2.7.gem --local --no-ri --no-rdoc' command gem install /home/vagrant/.rvm/gem-cache/gem-wrappers-1.2.7.gem --local --no-ri --no-rdoc
+++ typeset name message _command_start _command_name
+++ typeset -a _command
+++ name='gem.install.gem-wrappers->=1.2.7'
+++ message='installing gem /home/vagrant/.rvm/gem-cache/gem-wrappers-1.2.7.gem --local --no-ri --no-rdoc'
+++ shift 2
+++ _command=("$@")
+++ _command_start=command
+++ ((  7  ))
+++ [[ command == *\=* ]]
+++ _command_name=command
+++ [[ command != *\=* ]]
+++ __function_on_stack __rvm_log_command_internal
+++ __rvm_string_includes '__function_on_stack __rvm_log_command gem_install_force gem_install gemset_import_list __rvm_log_dotted __rvm_log_command_internal __rvm_log_command gemset_import gemset_initial __rvm_with gemset_create __rvm_initial_gemsets_create_without_rubygems __rvm_initial_gemsets_create __rvm_install_source ruby_install __rvm_install_ruby __rvm_manage_rubies source __rvm_run_wrapper __rvm_cli_install_ruby rvm' __rvm_log_command_internal
+++ typeset __search '__text=__function_on_stack __rvm_log_command gem_install_force gem_install gemset_import_list __rvm_log_dotted __rvm_log_command_internal __rvm_log_command gemset_import gemset_initial __rvm_with gemset_create __rvm_initial_gemsets_create_without_rubygems __rvm_initial_gemsets_create __rvm_install_source ruby_install __rvm_install_ruby __rvm_manage_rubies source __rvm_run_wrapper __rvm_cli_install_ruby rvm'
+++ shift
+++ for __search in '"$@"'
+++ [[  __function_on_stack __rvm_log_command gem_install_force gem_install gemset_import_list __rvm_log_dotted __rvm_log_command_internal __rvm_log_command gemset_import gemset_initial __rvm_with gemset_create __rvm_initial_gemsets_create_without_rubygems __rvm_initial_gemsets_create __rvm_install_source ruby_install __rvm_install_ruby __rvm_manage_rubies source __rvm_run_wrapper __rvm_cli_install_ruby rvm  == *\ \_\_\r\v\m\_\l\o\g\_\c\o\m\m\a\n\d\_\i\n\t\e\r\n\a\l\ * ]]
+++ return 0
+++ __rvm_log_command_simple command gem install /home/vagrant/.rvm/gem-cache/gem-wrappers-1.2.7.gem --local --no-ri --no-rdoc
+++ __rvm_log_command_debug
++++ __rvm_date '+%Y-%m-%d %H:%M:%S'
++++ date '+%Y-%m-%d %H:%M:%S'
+++ printf %b '[2015-06-03 06:44:34] command\n'
+[2015-06-03 06:44:34] command
+++ is_a_function command
+++ typeset -f command
+++ return 1
+++ printf %b 'current path: /home/vagrant/.rvm/src/ruby-2.1.5\n'
+current path: /home/vagrant/.rvm/src/ruby-2.1.5
+++ __rvm_grep -E '^GEM_HOME=|^GEM_PATH=|^PATH='
+++ GREP_OPTIONS=
+++ env
+++ command grep -E '^GEM_HOME=|^GEM_PATH=|^PATH='
+++ grep -E '^GEM_HOME=|^GEM_PATH=|^PATH='
+GEM_HOME=/home/vagrant/.rvm/gems/ruby-2.1.5@global
+PATH=/home/vagrant/.rvm/gems/ruby-2.1.5@global/bin:/home/vagrant/.rvm/rubies/ruby-2.1.5/bin:/home/vagrant/.rvm/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
+GEM_PATH=/home/vagrant/.rvm/gems/ruby-2.1.5@global
+++ printf %b 'command(7): command gem install /home/vagrant/.rvm/gem-cache/gem-wrappers-1.2.7.gem --local --no-ri --no-rdoc\n'
+command(7): command gem install /home/vagrant/.rvm/gem-cache/gem-wrappers-1.2.7.gem --local --no-ri --no-rdoc
+++ rvm_log 'installing gem /home/vagrant/.rvm/gem-cache/gem-wrappers-1.2.7.gem --local --no-ri --no-rdoc'
+++ [[ '' == 1 ]]
+++ rvm_pretty_print stdout
+++ case "${rvm_pretty_print_flag:=auto}" in
+++ case "${TERM:-dumb}" in
+++ case "$1" in
+++ [[ -t 1 ]]
+++ return 1
+++ printf %b 'installing gem /home/vagrant/.rvm/gem-cache/gem-wrappers-1.2.7.gem --local --no-ri --no-rdoc\n'
+installing gem /home/vagrant/.rvm/gem-cache/gem-wrappers-1.2.7.gem --local --no-ri --no-rdoc
+++ command gem install /home/vagrant/.rvm/gem-cache/gem-wrappers-1.2.7.gem --local --no-ri --no-rdoc
+++ gem install /home/vagrant/.rvm/gem-cache/gem-wrappers-1.2.7.gem --local --no-ri --no-rdoc
+Building native extensions.  This could take a while...
+Successfully installed gem-wrappers-1.2.7
+1 gem installed
+++ true
+++ for line in '"$@"'
+++ gem_install rubygems-bundler
+++ typeset gem_name gem_version version_check
+++ gem_version=
+++ __rvm_parse_gems_args rubygems-bundler
+++ typeset gem=rubygems-bundler
+++ __rvm_string_match rubygems-bundler '*.gem$'
+++ typeset _string
+++ _string=rubygems-bundler
+++ shift
+++ ((  1  ))
+++ case "${_string}" in
+++ shift
+++ ((  0  ))
+++ return 1
+++ gem_name=rubygems-bundler
+++ case "$gem" in
+++ [[ -z '' ]]
+++ __rvm_db gem_rubygems-bundler_version gem_version
+++ typeset value key variable
+++ key=gem_rubygems-bundler_version
+++ key=gem_rubygems-bundler_version
+++ variable=gem_version
+++ value=
+++ [[ -f /home/vagrant/.rvm/user/db ]]
++++ __rvm_db_ /home/vagrant/.rvm/user/db gem_rubygems-bundler_version
++++ typeset __db __key __value
++++ __db=/home/vagrant/.rvm/user/db
++++ __key=gem_rubygems-bundler_version
++++ shift 2
++++ __value=
++++ case "${__value}" in
++++ __rvm_db_get /home/vagrant/.rvm/user/db gem_rubygems-bundler_version
++++ [[ -f /home/vagrant/.rvm/user/db ]]
++++ __rvm_sed -n -e '\#^gem_rubygems-bundler_version=# { s#^gem_rubygems-bundler_version=##;; p; }' -e '/^$/d'
++++ sed -n -e '\#^gem_rubygems-bundler_version=# { s#^gem_rubygems-bundler_version=##;; p; }' -e '/^$/d'
+++ value=
+++ [[ -z '' ]]
+++ [[ -f /home/vagrant/.rvm/config/db ]]
++++ __rvm_db_ /home/vagrant/.rvm/config/db gem_rubygems-bundler_version
++++ typeset __db __key __value
++++ __db=/home/vagrant/.rvm/config/db
++++ __key=gem_rubygems-bundler_version
++++ shift 2
++++ __value=
++++ case "${__value}" in
++++ __rvm_db_get /home/vagrant/.rvm/config/db gem_rubygems-bundler_version
++++ [[ -f /home/vagrant/.rvm/config/db ]]
++++ __rvm_sed -n -e '\#^gem_rubygems-bundler_version=# { s#^gem_rubygems-bundler_version=##;; p; }' -e '/^$/d'
++++ sed -n -e '\#^gem_rubygems-bundler_version=# { s#^gem_rubygems-bundler_version=##;; p; }' -e '/^$/d'
+++ value=
+++ [[ -n '' ]]
+++ return 1
+++ ((  0 == 0  ))
+++ is_gem_installed
+++ typeset gem_spec
+++ gem_spec='gem '\''rubygems-bundler'\'''
+++ [[ -n '' ]]
+++ version_check='*([[:digit:]\.])'
+++ ls --color=auto -ld '/home/vagrant/.rvm/gems/ruby-2.1.5@global/gems/rubygems-bundler-*([[:digit:]\.])'
+++ /home/vagrant/.rvm/rubies/ruby-2.1.5/bin/ruby -rrubygems -e 'gem '\''rubygems-bundler'\'''
+++ return 1
+++ gem_install_force
+++ typeset __available_gem
+++ typeset -a install_params
+++ install_params=()
++++ tail -n 1
++++ ls --color=auto -v1 '/home/vagrant/.rvm/gem-cache/rubygems-bundler-*([[:digit:]\.]).gem'
+++ __available_gem=
+++ [[ -n '' ]]
+++ [[ -n '' ]]
+++ install_params+=(--no-ri --no-rdoc $rvm_gem_options)
+++ __rvm_log_command gem.install.rubygems-bundler 'installing gem rubygems-bundler --no-ri --no-rdoc' command gem install rubygems-bundler --no-ri --no-rdoc
+++ typeset name message _command_start _command_name
+++ typeset -a _command
+++ name=gem.install.rubygems-bundler
+++ message='installing gem rubygems-bundler --no-ri --no-rdoc'
+++ shift 2
+++ _command=("$@")
+++ _command_start=command
+++ ((  6  ))
+++ [[ command == *\=* ]]
+++ _command_name=command
+++ [[ command != *\=* ]]
+++ __function_on_stack __rvm_log_command_internal
+++ __rvm_string_includes '__function_on_stack __rvm_log_command gem_install_force gem_install gemset_import_list __rvm_log_dotted __rvm_log_command_internal __rvm_log_command gemset_import gemset_initial __rvm_with gemset_create __rvm_initial_gemsets_create_without_rubygems __rvm_initial_gemsets_create __rvm_install_source ruby_install __rvm_install_ruby __rvm_manage_rubies source __rvm_run_wrapper __rvm_cli_install_ruby rvm' __rvm_log_command_internal
+++ typeset __search '__text=__function_on_stack __rvm_log_command gem_install_force gem_install gemset_import_list __rvm_log_dotted __rvm_log_command_internal __rvm_log_command gemset_import gemset_initial __rvm_with gemset_create __rvm_initial_gemsets_create_without_rubygems __rvm_initial_gemsets_create __rvm_install_source ruby_install __rvm_install_ruby __rvm_manage_rubies source __rvm_run_wrapper __rvm_cli_install_ruby rvm'
+++ shift
+++ for __search in '"$@"'
+++ [[  __function_on_stack __rvm_log_command gem_install_force gem_install gemset_import_list __rvm_log_dotted __rvm_log_command_internal __rvm_log_command gemset_import gemset_initial __rvm_with gemset_create __rvm_initial_gemsets_create_without_rubygems __rvm_initial_gemsets_create __rvm_install_source ruby_install __rvm_install_ruby __rvm_manage_rubies source __rvm_run_wrapper __rvm_cli_install_ruby rvm  == *\ \_\_\r\v\m\_\l\o\g\_\c\o\m\m\a\n\d\_\i\n\t\e\r\n\a\l\ * ]]
+++ return 0
+++ __rvm_log_command_simple command gem install rubygems-bundler --no-ri --no-rdoc
+++ __rvm_log_command_debug
++++ __rvm_date '+%Y-%m-%d %H:%M:%S'
++++ date '+%Y-%m-%d %H:%M:%S'
+++ printf %b '[2015-06-03 06:44:35] command\n'
+[2015-06-03 06:44:35] command
+++ is_a_function command
+++ typeset -f command
+++ return 1
+++ printf %b 'current path: /home/vagrant/.rvm/src/ruby-2.1.5\n'
+current path: /home/vagrant/.rvm/src/ruby-2.1.5
+++ __rvm_grep -E '^GEM_HOME=|^GEM_PATH=|^PATH='
+++ GREP_OPTIONS=
+++ env
+++ command grep -E '^GEM_HOME=|^GEM_PATH=|^PATH='
+++ grep -E '^GEM_HOME=|^GEM_PATH=|^PATH='
+GEM_HOME=/home/vagrant/.rvm/gems/ruby-2.1.5@global
+PATH=/home/vagrant/.rvm/gems/ruby-2.1.5@global/bin:/home/vagrant/.rvm/rubies/ruby-2.1.5/bin:/home/vagrant/.rvm/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
+GEM_PATH=/home/vagrant/.rvm/gems/ruby-2.1.5@global
+++ printf %b 'command(6): command gem install rubygems-bundler --no-ri --no-rdoc\n'
+command(6): command gem install rubygems-bundler --no-ri --no-rdoc
+++ rvm_log 'installing gem rubygems-bundler --no-ri --no-rdoc'
+++ [[ '' == 1 ]]
+++ rvm_pretty_print stdout
+++ case "${rvm_pretty_print_flag:=auto}" in
+++ case "${TERM:-dumb}" in
+++ case "$1" in
+++ [[ -t 1 ]]
+++ return 1
+++ printf %b 'installing gem rubygems-bundler --no-ri --no-rdoc\n'
+installing gem rubygems-bundler --no-ri --no-rdoc
+++ command gem install rubygems-bundler --no-ri --no-rdoc
+++ gem install rubygems-bundler --no-ri --no-rdoc
+ERROR:  While executing gem ... (Gem::RemoteFetcher::FetchError)
+    SSL_connect SYSCALL returned=5 errno=0 state=unknown state (https://rubygems.global.ssl.fastly.net/quick/Marshal.4.8/rubygems-bundler-1.4.4.gemspec.rz)
+++ return 1
+++ return 1
+++ return 1
+++ return 1
+++ rvm_error 'there was an error installing gem rubygems-bundler'
+++ rvm_pretty_print stderr
+++ case "${rvm_pretty_print_flag:=auto}" in
+++ case "${TERM:-dumb}" in
+++ case "$1" in
+++ [[ -t 2 ]]
+++ return 1
+++ printf %b 'there was an error installing gem rubygems-bundler\n'
+there was an error installing gem rubygems-bundler
+++ for line in '"$@"'
+++ gem_install rake
+++ typeset gem_name gem_version version_check
+++ gem_version=
+++ __rvm_parse_gems_args rake
+++ typeset gem=rake
+++ __rvm_string_match rake '*.gem$'
+++ typeset _string
+++ _string=rake
+++ shift
+++ ((  1  ))
+++ case "${_string}" in
+++ shift
+++ ((  0  ))
+++ return 1
+++ gem_name=rake
+++ case "$gem" in
+++ [[ -z '' ]]
+++ __rvm_db gem_rake_version gem_version
+++ typeset value key variable
+++ key=gem_rake_version
+++ key=gem_rake_version
+++ variable=gem_version
+++ value=
+++ [[ -f /home/vagrant/.rvm/user/db ]]
++++ __rvm_db_ /home/vagrant/.rvm/user/db gem_rake_version
++++ typeset __db __key __value
++++ __db=/home/vagrant/.rvm/user/db
++++ __key=gem_rake_version
++++ shift 2
++++ __value=
++++ case "${__value}" in
++++ __rvm_db_get /home/vagrant/.rvm/user/db gem_rake_version
++++ [[ -f /home/vagrant/.rvm/user/db ]]
++++ __rvm_sed -n -e '\#^gem_rake_version=# { s#^gem_rake_version=##;; p; }' -e '/^$/d'
++++ sed -n -e '\#^gem_rake_version=# { s#^gem_rake_version=##;; p; }' -e '/^$/d'
+++ value=
+++ [[ -z '' ]]
+++ [[ -f /home/vagrant/.rvm/config/db ]]
++++ __rvm_db_ /home/vagrant/.rvm/config/db gem_rake_version
++++ typeset __db __key __value
++++ __db=/home/vagrant/.rvm/config/db
++++ __key=gem_rake_version
++++ shift 2
++++ __value=
++++ case "${__value}" in
++++ __rvm_db_get /home/vagrant/.rvm/config/db gem_rake_version
++++ [[ -f /home/vagrant/.rvm/config/db ]]
++++ __rvm_sed -n -e '\#^gem_rake_version=# { s#^gem_rake_version=##;; p; }' -e '/^$/d'
++++ sed -n -e '\#^gem_rake_version=# { s#^gem_rake_version=##;; p; }' -e '/^$/d'
+++ value=
+++ [[ -n '' ]]
+++ return 1
+++ ((  0 == 0  ))
+++ is_gem_installed
+++ typeset gem_spec
+++ gem_spec='gem '\''rake'\'''
+++ [[ -n '' ]]
+++ version_check='*([[:digit:]\.])'
+++ ls --color=auto -ld /home/vagrant/.rvm/gems/ruby-2.1.5@global/gems/rake-10.1.0
+++ rvm_log 'gem rake  is already installed'
+++ [[ '' == 1 ]]
+++ rvm_pretty_print stdout
+++ case "${rvm_pretty_print_flag:=auto}" in
+++ case "${TERM:-dumb}" in
+++ case "$1" in
+++ [[ -t 1 ]]
+++ return 1
+++ printf %b 'gem rake  is already installed\n'
+gem rake  is already installed
+++ return 0
+++ for line in '"$@"'
+++ gem_install rvm
+++ typeset gem_name gem_version version_check
+++ gem_version=
+++ __rvm_parse_gems_args rvm
+++ typeset gem=rvm
+++ __rvm_string_match rvm '*.gem$'
+++ typeset _string
+++ _string=rvm
+++ shift
+++ ((  1  ))
+++ case "${_string}" in
+++ shift
+++ ((  0  ))
+++ return 1
+++ gem_name=rvm
+++ case "$gem" in
+++ [[ -z '' ]]
+++ __rvm_db gem_rvm_version gem_version
+++ typeset value key variable
+++ key=gem_rvm_version
+++ key=gem_rvm_version
+++ variable=gem_version
+++ value=
+++ [[ -f /home/vagrant/.rvm/user/db ]]
++++ __rvm_db_ /home/vagrant/.rvm/user/db gem_rvm_version
++++ typeset __db __key __value
++++ __db=/home/vagrant/.rvm/user/db
++++ __key=gem_rvm_version
++++ shift 2
++++ __value=
++++ case "${__value}" in
++++ __rvm_db_get /home/vagrant/.rvm/user/db gem_rvm_version
++++ [[ -f /home/vagrant/.rvm/user/db ]]
++++ __rvm_sed -n -e '\#^gem_rvm_version=# { s#^gem_rvm_version=##;; p; }' -e '/^$/d'
++++ sed -n -e '\#^gem_rvm_version=# { s#^gem_rvm_version=##;; p; }' -e '/^$/d'
+++ value=
+++ [[ -z '' ]]
+++ [[ -f /home/vagrant/.rvm/config/db ]]
++++ __rvm_db_ /home/vagrant/.rvm/config/db gem_rvm_version
++++ typeset __db __key __value
++++ __db=/home/vagrant/.rvm/config/db
++++ __key=gem_rvm_version
++++ shift 2
++++ __value=
++++ case "${__value}" in
++++ __rvm_db_get /home/vagrant/.rvm/config/db gem_rvm_version
++++ [[ -f /home/vagrant/.rvm/config/db ]]
++++ __rvm_sed -n -e '\#^gem_rvm_version=# { s#^gem_rvm_version=##;; p; }' -e '/^$/d'
++++ sed -n -e '\#^gem_rvm_version=# { s#^gem_rvm_version=##;; p; }' -e '/^$/d'
+++ value='>=1.11.3.9'
+++ [[ -n >=1.11.3.9 ]]
+++ [[ -n gem_version ]]
+++ eval 'gem_version='\''>=1.11.3.9'\'''
++++ gem_version='>=1.11.3.9'
+++ true
+++ ((  0 == 0  ))
+++ is_gem_installed
+++ typeset gem_spec
+++ gem_spec='gem '\''rvm'\'''
+++ [[ -n >=1.11.3.9 ]]
+++ gem_spec+=', '\''>=1.11.3.9'\'''
+++ version_check=1.11.3.9
+++ ls --color=auto -ld /home/vagrant/.rvm/gems/ruby-2.1.5@global/gems/rvm-1.11.3.9
+++ /home/vagrant/.rvm/rubies/ruby-2.1.5/bin/ruby -rrubygems -e 'gem '\''rvm'\'', '\''>=1.11.3.9'\'''
+++ return 1
+++ gem_install_force
+++ typeset __available_gem
+++ typeset -a install_params
+++ install_params=()
++++ tail -n 1
++++ ls --color=auto -v1 /home/vagrant/.rvm/gem-cache/rvm-1.11.3.9.gem
+++ __available_gem=/home/vagrant/.rvm/gem-cache/rvm-1.11.3.9.gem
+++ [[ -n /home/vagrant/.rvm/gem-cache/rvm-1.11.3.9.gem ]]
+++ install_params+=(--local)
+++ install_params+=(--no-ri --no-rdoc $rvm_gem_options)
+++ __rvm_log_command 'gem.install.rvm->=1.11.3.9' 'installing gem /home/vagrant/.rvm/gem-cache/rvm-1.11.3.9.gem --local --no-ri --no-rdoc' command gem install /home/vagrant/.rvm/gem-cache/rvm-1.11.3.9.gem --local --no-ri --no-rdoc
+++ typeset name message _command_start _command_name
+++ typeset -a _command
+++ name='gem.install.rvm->=1.11.3.9'
+++ message='installing gem /home/vagrant/.rvm/gem-cache/rvm-1.11.3.9.gem --local --no-ri --no-rdoc'
+++ shift 2
+++ _command=("$@")
+++ _command_start=command
+++ ((  7  ))
+++ [[ command == *\=* ]]
+++ _command_name=command
+++ [[ command != *\=* ]]
+++ __function_on_stack __rvm_log_command_internal
+++ __rvm_string_includes '__function_on_stack __rvm_log_command gem_install_force gem_install gemset_import_list __rvm_log_dotted __rvm_log_command_internal __rvm_log_command gemset_import gemset_initial __rvm_with gemset_create __rvm_initial_gemsets_create_without_rubygems __rvm_initial_gemsets_create __rvm_install_source ruby_install __rvm_install_ruby __rvm_manage_rubies source __rvm_run_wrapper __rvm_cli_install_ruby rvm' __rvm_log_command_internal
+++ typeset __search '__text=__function_on_stack __rvm_log_command gem_install_force gem_install gemset_import_list __rvm_log_dotted __rvm_log_command_internal __rvm_log_command gemset_import gemset_initial __rvm_with gemset_create __rvm_initial_gemsets_create_without_rubygems __rvm_initial_gemsets_create __rvm_install_source ruby_install __rvm_install_ruby __rvm_manage_rubies source __rvm_run_wrapper __rvm_cli_install_ruby rvm'
+++ shift
+++ for __search in '"$@"'
+++ [[  __function_on_stack __rvm_log_command gem_install_force gem_install gemset_import_list __rvm_log_dotted __rvm_log_command_internal __rvm_log_command gemset_import gemset_initial __rvm_with gemset_create __rvm_initial_gemsets_create_without_rubygems __rvm_initial_gemsets_create __rvm_install_source ruby_install __rvm_install_ruby __rvm_manage_rubies source __rvm_run_wrapper __rvm_cli_install_ruby rvm  == *\ \_\_\r\v\m\_\l\o\g\_\c\o\m\m\a\n\d\_\i\n\t\e\r\n\a\l\ * ]]
+++ return 0
+++ __rvm_log_command_simple command gem install /home/vagrant/.rvm/gem-cache/rvm-1.11.3.9.gem --local --no-ri --no-rdoc
+++ __rvm_log_command_debug
++++ __rvm_date '+%Y-%m-%d %H:%M:%S'
++++ date '+%Y-%m-%d %H:%M:%S'
+++ printf %b '[2015-06-03 06:44:43] command\n'
+[2015-06-03 06:44:43] command
+++ is_a_function command
+++ typeset -f command
+++ return 1
+++ printf %b 'current path: /home/vagrant/.rvm/src/ruby-2.1.5\n'
+current path: /home/vagrant/.rvm/src/ruby-2.1.5
+++ __rvm_grep -E '^GEM_HOME=|^GEM_PATH=|^PATH='
+++ GREP_OPTIONS=
+++ env
+++ command grep -E '^GEM_HOME=|^GEM_PATH=|^PATH='
+++ grep -E '^GEM_HOME=|^GEM_PATH=|^PATH='
+GEM_HOME=/home/vagrant/.rvm/gems/ruby-2.1.5@global
+PATH=/home/vagrant/.rvm/gems/ruby-2.1.5@global/bin:/home/vagrant/.rvm/rubies/ruby-2.1.5/bin:/home/vagrant/.rvm/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
+GEM_PATH=/home/vagrant/.rvm/gems/ruby-2.1.5@global
+++ printf %b 'command(7): command gem install /home/vagrant/.rvm/gem-cache/rvm-1.11.3.9.gem --local --no-ri --no-rdoc\n'
+command(7): command gem install /home/vagrant/.rvm/gem-cache/rvm-1.11.3.9.gem --local --no-ri --no-rdoc
+++ rvm_log 'installing gem /home/vagrant/.rvm/gem-cache/rvm-1.11.3.9.gem --local --no-ri --no-rdoc'
+++ [[ '' == 1 ]]
+++ rvm_pretty_print stdout
+++ case "${rvm_pretty_print_flag:=auto}" in
+++ case "${TERM:-dumb}" in
+++ case "$1" in
+++ [[ -t 1 ]]
+++ return 1
+++ printf %b 'installing gem /home/vagrant/.rvm/gem-cache/rvm-1.11.3.9.gem --local --no-ri --no-rdoc\n'
+installing gem /home/vagrant/.rvm/gem-cache/rvm-1.11.3.9.gem --local --no-ri --no-rdoc
+++ command gem install /home/vagrant/.rvm/gem-cache/rvm-1.11.3.9.gem --local --no-ri --no-rdoc
+++ gem install /home/vagrant/.rvm/gem-cache/rvm-1.11.3.9.gem --local --no-ri --no-rdoc
+Successfully installed rvm-1.11.3.9
+1 gem installed
+++ true

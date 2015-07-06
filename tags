@@ -1,0 +1,146 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+BRAZIL	credentials.py	/^BRAZIL = "Brazil"$/;"	v
+CHROMEDRIVER	fb_auto_commenter.py	/^CHROMEDRIVER = '\/usr\/local\/bin\/chromedriver'$/;"	v
+COMMENT_CONTENT	credentials.py	/^    COMMENT_CONTENT = [" Fight beside Pikachu! Become the TOP trainer of the world!! ", $/;"	v
+COMMENT_CONTENT	credentials.py	/^    COMMENT_CONTENT = [u"  Quer se tornar um dos primeiros 100 mil a curtir e ter a chance de ganhar um presente misterioso? Curta e fique de olho em nossas notificações!",$/;"	v
+COMMENT_CONTENT	credentials.py	/^    COMMENT_CONTENT = [u"Rien ne rend plus fou:  ",$/;"	v
+COMMENT_HEAD	credentials.py	/^    COMMENT_HEAD = u"Curta:  "$/;"	v
+COMMENT_LINK	credentials.py	/^    COMMENT_LINK = u"https:\/\/www.facebook.com\/NarutoCronicasNinjas"$/;"	v
+COMMENT_LINK	credentials.py	/^    COMMENT_LINK = u"https:\/\/www.facebook.com\/pocketsaga"$/;"	v
+COMMENT_LINK	credentials.py	/^    COMMENT_LINK = u"https:\/\/www.facebook.com\/roidespiratesgame"$/;"	v
+CONTROL_ACCOUNT	credentials.py	/^CONTROL_ACCOUNT = ('475028278@qq.com','win@2015')$/;"	v
+C_COMMENT_TABLE	fb_sqlite_operate.py	/^C_COMMENT_TABLE = 'c_comment_info'$/;"	v
+C_GROUP_TABLE	fb_sqlite_operate.py	/^C_GROUP_TABLE = 'c_group_info'$/;"	v
+ConfigParser	gs.py	/^import ConfigParser$/;"	i
+DB_FILE_PATH	credentials.py	/^    DB_FILE_PATH = "sqlite_db\/fb_comment_E.db"$/;"	v
+DB_FILE_PATH	credentials.py	/^DB_FILE_PATH = "sqlite_db\/"$/;"	v
+Display	fb_auto_commenter.py	/^from pyvirtualdisplay import Display$/;"	i
+Display	fb_network_test.py	/^from pyvirtualdisplay import Display$/;"	i
+EC	fb_web.py	/^from selenium.webdriver.support import expected_conditions as EC$/;"	i
+ENGLISH	credentials.py	/^ENGLISH = "English"$/;"	v
+FRENCH	credentials.py	/^FRENCH = "French"$/;"	v
+IN_SLEEP_MAX	credentials.py	/^IN_SLEEP_MAX = 300$/;"	v
+IN_SLEEP_MIN	credentials.py	/^IN_SLEEP_MIN = 120$/;"	v
+Keys	fb_auto_mail.py	/^from selenium.webdriver.common.keys import Keys$/;"	i
+Keys	fb_web.py	/^from selenium.webdriver.common.keys import Keys$/;"	i
+LOG_FILE	credentials.py	/^                %(time.strftime('%Y%m%d', time.localtime()))$/;"	v
+MAIL_FILE	credentials.py	/^    MAIL_FILE = 'log\/mail_B_%s.txt'%(time.strftime('%Y%m%d%H', time.localtime())) $/;"	v
+MAIL_FILE	credentials.py	/^    MAIL_FILE = 'log\/mail_E_%s.txt'%(time.strftime('%Y%m%d%H', time.localtime()))$/;"	v
+MAIL_FILE	credentials.py	/^    MAIL_FILE = 'log\/mail_F_%s.txt'%(time.strftime('%Y%m%d%H', time.localtime()))$/;"	v
+POST_SLEEP_MAX	credentials.py	/^POST_SLEEP_MAX = 40$/;"	v
+POST_SLEEP_MIN	credentials.py	/^POST_SLEEP_MIN = 20$/;"	v
+P_COMMENT_TABLE	fb_sqlite_operate.py	/^P_COMMENT_TABLE = 'p_record_info'$/;"	v
+RECEIVERS	credentials.py	/^RECEIVERS = ['juantang@enjoygameinc.com','qiangliu@enjoygameinc.com','peterwang@enjoygameinc.com']$/;"	v
+SECOND_INTERVAL	credentials.py	/^SECOND_INTERVAL = 600 * 10$/;"	v
+SENDER	credentials.py	/^SENDER = ['gitlab@enjoygameinc.com']$/;"	v
+SENDER_PASSWD	credentials.py	/^SENDER_PASSWD = 'git@2015'$/;"	v
+SENDER_USERID	credentials.py	/^SENDER_USERID = 'gitlab@enjoygameinc.com'$/;"	v
+SERVER_ADDRAESS	credentials.py	/^SERVER_ADDRAESS = 'smtp.exmail.qq.com'$/;"	v
+SERVER_PORT	credentials.py	/^SERVER_PORT = '25'$/;"	v
+SignedJwtAssertionCredentials	gs.py	/^from oauth2client.client import SignedJwtAssertionCredentials$/;"	i
+USER_INFO	credentials.py	/^                ("tomzhong001@163.com", 'huajie001')]$/;"	v
+USER_INFO	credentials.py	/^                ('8618511999856','123456qwe')]$/;"	v
+USER_INFO	credentials.py	/^                ('ponoii@126.com', '776655')]$/;"	v
+WebDriverWait	fb_auto_mail.py	/^from selenium.webdriver.support.ui import WebDriverWait$/;"	i
+WebDriverWait	fb_web.py	/^from selenium.webdriver.support.ui import WebDriverWait$/;"	i
+__init__	fb_sqlite_operate.py	/^    def __init__(self, user_id):$/;"	m	class:fb_operate_db
+__init__	fb_web.py	/^    def __init__(self):$/;"	m	class:web_operate
+add_china_tag	fb_web.py	/^    def add_china_tag(self, link):$/;"	m	class:web_operate
+add_new_comment	fb_sqlite_operate.py	/^    def add_new_comment(self, comment, user_id):$/;"	m	class:fb_operate_db
+add_new_post	fb_sqlite_operate.py	/^    def add_new_post(self, comment, user_id):$/;"	m	class:fb_operate_db
+add_record	fb_auto_commenter.py	/^def add_record(comment):$/;"	f
+add_task	fb_auto_commenter.py	/^def add_task(user_info):$/;"	f
+close_limit	fb_auto_commenter.py	/^def close_limit():$/;"	f
+close_sqlite3	fb_sqlite_operate.py	/^    def close_sqlite3(self):$/;"	m	class:fb_operate_db
+collect_group	fb_auto_commenter.py	/^def collect_group(web):$/;"	f
+create_table	fb_sqlite_operate.py	/^    def create_table(self):$/;"	m	class:fb_operate_db
+credentials	fb_auto_commenter.py	/^import credentials$/;"	i
+credentials	fb_auto_mail.py	/^import credentials$/;"	i
+credentials	fb_sqlite_operate.py	/^import credentials$/;"	i
+credentials	fb_web.py	/^import credentials$/;"	i
+datetime	fb_auto_commenter.py	/^import datetime$/;"	i
+delete_china_tag	fb_web.py	/^    def delete_china_tag(self, link):$/;"	m	class:web_operate
+delete_no_exist_comment	fb_sqlite_operate.py	/^    def delete_no_exist_comment(self, comment, user_id):$/;"	m	class:fb_operate_db
+display	fb_network_test.py	/^display = Display(visible=0, size=(800,600))$/;"	v
+do_login	fb_auto_mail.py	/^def do_login(user_info):$/;"	f
+do_login	fb_web.py	/^    def do_login(self, user_info):$/;"	m	class:web_operate
+do_scroll	fb_web.py	/^    def do_scroll(self, n, t):$/;"	m	class:web_operate
+driver	fb_network_test.py	/^driver = webdriver.Chrome()$/;"	v
+exclude_group_ids	credentials.py	/^                         "1592145534336309", "1555753771369264"]$/;"	v
+exit_browser	fb_web.py	/^    def exit_browser(self):$/;"	m	class:web_operate
+fb_auto_mail	fb_auto_commenter.py	/^import fb_auto_mail$/;"	i
+fb_auto_mail	fb_sqlite_operate.py	/^import fb_auto_mail$/;"	i
+fb_locked_strs	credentials.py	/^fb_locked_strs = ["you are blocked","You have been temporarily blocked"]$/;"	v
+fb_operate_db	fb_sqlite_operate.py	/^class fb_operate_db:$/;"	c
+fb_sqlite_operate	fb_auto_commenter.py	/^import fb_sqlite_operate$/;"	i
+fb_web	fb_auto_commenter.py	/^import fb_web$/;"	i
+filtrate_group	fb_auto_commenter.py	/^def filtrate_group(group_id):$/;"	f
+find_element	fb_web.py	/^    def find_element(self, href_str):$/;"	m	class:web_operate
+find_post_error_message	fb_web.py	/^    def find_post_error_message(self):$/;"	m	class:web_operate
+gen_random_str	fb_auto_commenter.py	/^def gen_random_str(size=6,chars=string.ascii_uppercase+string.digits):$/;"	f
+get_browser	fb_web.py	/^    def get_browser(self):$/;"	m	class:web_operate
+get_comment	fb_sqlite_operate.py	/^    def get_comment(self, user_id, start_num, limit_num):$/;"	m	class:fb_operate_db
+get_comment_num	fb_sqlite_operate.py	/^    def get_comment_num(self, user_id):$/;"	m	class:fb_operate_db
+get_group_comment_ids	fb_web.py	/^    def get_group_comment_ids(self, group_id):$/;"	m	class:web_operate
+get_group_ids	fb_web.py	/^    def get_group_ids(self):$/;"	m	class:web_operate
+get_url	fb_web.py	/^    def get_url(self, url):$/;"	m	class:web_operate
+googledocs_group	fb_auto_commenter.py	/^def googledocs_group(web):$/;"	f
+gs	fb_auto_commenter.py	/^import gs$/;"	i
+gs_operate	gs.py	/^class gs_operate():$/;"	c
+gspread	gs.py	/^import gspread$/;"	i
+json	gs.py	/^import json$/;"	i
+judge_id	fb_web.py	/^    def judge_id(self, group_id, exclude_groups_id):$/;"	m	class:web_operate
+logging	fb_auto_commenter.py	/^import logging$/;"	i
+logging	fb_auto_mail.py	/^import logging$/;"	i
+logging	fb_sqlite_operate.py	/^import logging$/;"	i
+logging	fb_web.py	/^import logging$/;"	i
+login	gs.py	/^    def login(self):$/;"	m	class:gs_operate
+main	fb_auto_commenter.py	/^def main():$/;"	f
+multiprocessing	fb_auto_commenter.py	/^import multiprocessing$/;"	i
+open_by_url	gs.py	/^    def open_by_url(self):$/;"	m	class:gs_operate
+open_limit	fb_auto_commenter.py	/^def open_limit():$/;"	f
+os	fb_auto_commenter.py	/^import os$/;"	i
+os	fb_network_test.py	/^import os$/;"	i
+os	gs.py	/^import os$/;"	i
+post_comment	fb_auto_commenter.py	/^def post_comment(web, comment):$/;"	f
+post_comment_operate	fb_auto_commenter.py	/^def post_comment_operate(web, comment_url, comment):$/;"	f
+post_comments	fb_auto_commenter.py	/^def post_comments(web):$/;"	f
+post_interval	fb_auto_commenter.py	/^def post_interval(start_time):$/;"	f
+post_operate	fb_web.py	/^    def post_operate(self):$/;"	m	class:web_operate
+r	fb_http_post.py	/^r = requests.post("graph.facebook.com", data={'@number': 12524, '@type': 'issue', '@action': 'show'})$/;"	v
+random	fb_auto_commenter.py	/^import random$/;"	i
+re	fb_auto_commenter.py	/^import re$/;"	i
+re	fb_web.py	/^import re$/;"	i
+read_file	fb_auto_mail.py	/^def read_file():$/;"	f
+read_from_googledocs	fb_auto_commenter.py	/^def read_from_googledocs():$/;"	f
+requests	fb_http_post.py	/^import requests$/;"	i
+select_language	fb_auto_mail.py	/^def select_language(browser):$/;"	f
+select_language	fb_web.py	/^    def select_language(self):$/;"	m	class:web_operate
+send_mail	fb_auto_mail.py	/^def send_mail():$/;"	f
+send_remend	fb_auto_mail.py	/^def send_remend():$/;"	f
+smtplib	fb_auto_mail.py	/^import smtplib$/;"	i
+sqlite3	fb_sqlite_operate.py	/^import sqlite3$/;"	i
+start_task_process	fb_auto_commenter.py	/^def start_task_process():$/;"	f
+string	fb_auto_commenter.py	/^import string$/;"	i
+sys	credentials.py	/^import sys$/;"	i
+sys	fb_auto_commenter.py	/^import sys$/;"	i
+sys	fb_web.py	/^import sys$/;"	i
+time	credentials.py	/^import time$/;"	i
+time	fb_auto_commenter.py	/^import time$/;"	i
+time	fb_web.py	/^import time$/;"	i
+update_comment_old	fb_sqlite_operate.py	/^    def update_comment_old(self, comment, user_id):$/;"	m	class:fb_operate_db
+verify_post_result	fb_auto_commenter.py	/^def verify_post_result(web, comment_url, comment):$/;"	f
+verity_exist	fb_web.py	/^    def verity_exist(self, post_link):$/;"	m	class:web_operate
+verity_has_posted	fb_auto_commenter.py	/^def verity_has_posted(web):$/;"	f
+web_operate	fb_web.py	/^class web_operate:$/;"	c
+web_wait	fb_web.py	/^    def web_wait(self):$/;"	m	class:web_operate
+webdriver	fb_auto_mail.py	/^from selenium import webdriver$/;"	i
+webdriver	fb_network_test.py	/^from selenium import webdriver$/;"	i
+webdriver	fb_web.py	/^from selenium import webdriver$/;"	i
+write_content	fb_web.py	/^    def write_content(self, post_content):$/;"	m	class:web_operate
+write_file	fb_auto_mail.py	/^def write_file(content):$/;"	f

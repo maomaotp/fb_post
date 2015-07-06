@@ -1,0 +1,81 @@
+--- 
+  File[/home/vagrant/.puppet]: 
+    !ruby/sym checked: 2015-04-03 09:27:46.008870 +00:00
+    !ruby/sym synced: 2015-04-03 09:27:46.009165 +00:00
+  File[/home/vagrant/.puppet/var]: 
+    !ruby/sym checked: 2015-04-03 09:27:46.009485 +00:00
+    !ruby/sym synced: 2015-04-03 09:27:46.009643 +00:00
+  File[/home/vagrant/.puppet/var/lib]: 
+    !ruby/sym checked: 2015-04-03 09:27:46.009963 +00:00
+    !ruby/sym synced: 2015-04-03 09:27:46.010137 +00:00
+  File[/home/vagrant/.puppet/var/clientbucket]: 
+    !ruby/sym checked: 2015-04-03 09:27:46.010402 +00:00
+    !ruby/sym synced: 2015-04-03 09:27:46.010632 +00:00
+  File[/home/vagrant/.puppet/var/state]: 
+    !ruby/sym checked: 2015-04-03 09:27:46.010885 +00:00
+    !ruby/sym synced: 2015-04-03 09:27:46.011082 +00:00
+  File[/home/vagrant/.puppet/var/log]: 
+    !ruby/sym checked: 2015-04-03 09:27:46.011375 +00:00
+    !ruby/sym synced: 2015-04-03 09:27:46.012001 +00:00
+  File[/home/vagrant/.puppet/var/run]: 
+    !ruby/sym checked: 2015-04-03 09:27:46.012475 +00:00
+    !ruby/sym synced: 2015-04-03 09:27:46.012713 +00:00
+  File[/home/vagrant/.puppet/var/state/graphs]: 
+    !ruby/sym checked: 2015-04-03 09:27:46.013006 +00:00
+    !ruby/sym synced: 2015-04-03 09:27:46.013166 +00:00
+  File[/home/vagrant/.puppet/var/client_yaml]: 
+    !ruby/sym checked: 2015-04-03 09:27:46.013408 +00:00
+    !ruby/sym synced: 2015-04-03 09:27:46.013606 +00:00
+  File[/home/vagrant/.puppet/var/client_data]: 
+    !ruby/sym checked: 2015-04-03 09:27:46.013853 +00:00
+    !ruby/sym synced: 2015-04-03 09:27:46.014040 +00:00
+  File[/home/vagrant/.puppet/ssl]: 
+    !ruby/sym checked: 2015-04-03 09:27:46.014284 +00:00
+    !ruby/sym synced: 2015-04-03 09:27:46.014479 +00:00
+  File[/home/vagrant/.puppet/ssl/public_keys]: 
+    !ruby/sym checked: 2015-04-03 09:27:46.014760 +00:00
+    !ruby/sym synced: 2015-04-03 09:27:46.015053 +00:00
+  File[/home/vagrant/.puppet/ssl/certificate_requests]: 
+    !ruby/sym checked: 2015-04-03 09:27:46.015393 +00:00
+    !ruby/sym synced: 2015-04-03 09:27:46.015558 +00:00
+  File[/home/vagrant/.puppet/ssl/certs]: 
+    !ruby/sym checked: 2015-04-03 09:27:46.015807 +00:00
+    !ruby/sym synced: 2015-04-03 09:27:46.015964 +00:00
+  File[/home/vagrant/.puppet/ssl/private_keys]: 
+    !ruby/sym checked: 2015-04-03 09:27:46.016216 +00:00
+    !ruby/sym synced: 2015-04-03 09:27:46.016410 +00:00
+  File[/home/vagrant/.puppet/ssl/private]: 
+    !ruby/sym checked: 2015-04-03 09:27:46.016669 +00:00
+    !ruby/sym synced: 2015-04-03 09:27:46.016860 +00:00
+  File[/home/vagrant/.puppet/var/facts.d]: 
+    !ruby/sym checked: 2015-04-03 09:27:46.017002 +00:00
+    !ruby/sym synced: 2015-04-03 09:27:46.017211 +00:00
+  !ruby/sym configuration: {}
+  Schedule[daily]: 
+    !ruby/sym checked: 2015-04-03 09:27:46.441763 +00:00
+  Schedule[monthly]: 
+    !ruby/sym checked: 2015-04-03 09:27:46.441933 +00:00
+  Schedule[hourly]: 
+    !ruby/sym checked: 2015-04-03 09:27:46.442317 +00:00
+  Stage[main]: 
+    !ruby/sym checked: 2015-04-03 09:27:46.604820 +00:00
+  Class[Main]: 
+    !ruby/sym checked: 2015-04-03 09:27:46.603782 +00:00
+  Package[nginx]: 
+    !ruby/sym checked: 2015-04-03 09:27:46.463616 +00:00
+  File[default]: 
+    !ruby/sym checked: 2015-04-03 09:27:46.529281 +00:00
+  Class[Settings]: 
+    !ruby/sym checked: 2015-04-03 09:27:46.531923 +00:00
+  Service[nginx]: 
+    !ruby/sym checked: 2015-04-03 09:27:46.588063 +00:00
+  Schedule[never]: 
+    !ruby/sym checked: 2015-04-03 09:27:46.588542 +00:00
+  File[nginx.conf]: 
+    !ruby/sym checked: 2015-04-03 09:27:46.602833 +00:00
+  Filebucket[puppet]: 
+    !ruby/sym checked: 2015-04-03 09:27:46.603172 +00:00
+  Schedule[weekly]: 
+    !ruby/sym checked: 2015-04-03 09:27:46.603308 +00:00
+  Schedule[puppet]: 
+    !ruby/sym checked: 2015-04-03 09:27:46.603420 +00:00

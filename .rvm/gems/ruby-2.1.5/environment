@@ -1,0 +1,8 @@
+export PATH="/home/vagrant/.rvm/gems/ruby-2.1.5/bin:/home/vagrant/.rvm/gems/ruby-2.1.5@global/bin:/home/vagrant/.rvm/rubies/ruby-2.1.5/bin:$PATH"
+export GEM_HOME='/home/vagrant/.rvm/gems/ruby-2.1.5'
+export GEM_PATH='/home/vagrant/.rvm/gems/ruby-2.1.5:/home/vagrant/.rvm/gems/ruby-2.1.5@global'
+export MY_RUBY_HOME='/home/vagrant/.rvm/rubies/ruby-2.1.5'
+export IRBRC='/home/vagrant/.rvm/rubies/ruby-2.1.5/.irbrc'
+unset MAGLEV_HOME
+unset RBXOPT
+export RUBY_VERSION='ruby-2.1.5'

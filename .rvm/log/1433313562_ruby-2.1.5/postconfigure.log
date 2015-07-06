@@ -1,0 +1,22 @@
+[2015-06-03 06:39:53] __rvm_post_configure_ruby
+__rvm_post_configure_ruby () 
+{ 
+    __rvm_post_configure_ruby_fix_athlon_sse2;
+    __rvm_post_configure_ruby_update_setup
+}
+current path: /home/vagrant/.rvm/src/ruby-2.1.5
+GEM_HOME=/home/vagrant/.rvm/gems/ruby-2.2.1
+PATH=/home/vagrant/.rvm/gems/ruby-2.2.1/bin:/home/vagrant/.rvm/gems/ruby-2.2.1@global/bin:/home/vagrant/.rvm/rubies/ruby-2.2.1/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/vagrant/.rvm/bin:/home/vagrant/.rvm/bin
+GEM_PATH=/home/vagrant/.rvm/gems/ruby-2.2.1:/home/vagrant/.rvm/gems/ruby-2.2.1@global
+command(1): __rvm_post_configure_ruby
+++ __rvm_post_configure_ruby_fix_athlon_sse2
+++ [[ -f /proc/cpuinfo ]]
+++ [[ -f Makefile ]]
+++ __rvm_grep '^XCFLAGS = .*-msse2' Makefile
+++ GREP_OPTIONS=
+++ command grep '^XCFLAGS = .*-msse2' Makefile
+++ grep '^XCFLAGS = .*-msse2' Makefile
+++ return 1
+++ __rvm_post_configure_ruby_update_setup
+++ typeset option
+++ ((  0 == 1  ))

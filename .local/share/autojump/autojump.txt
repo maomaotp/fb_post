@@ -1,0 +1,9 @@
+144.222051017	/workspace/cafestory-server
+34.6410161513	/home/vagrant/fbbot
+29.9999999999	/home/liuq
+26.4575131106	/home/autojump_v21.1.2
+24.4948974278	/home/vagrant/.oh-my-zsh
+20.0	/workspace
+20.0	/home
+20.0	/home/vagrant/fbbot/log
+17.3205080757	/home/vagrant/fbbot/sqlite_db

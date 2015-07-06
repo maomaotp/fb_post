@@ -1,0 +1,59 @@
+------------------------------------------------------------
+/usr/bin/pip run on Mon Jun  1 04:21:14 2015
+Downloading/unpacking chromedriver
+  Getting page https://pypi.python.org/simple/chromedriver/
+  URLs to search for versions for chromedriver:
+  * https://pypi.python.org/simple/chromedriver/
+  Analyzing links from page https://pypi.python.org/simple/chromedriver/
+    Found link https://pypi.python.org/packages/source/c/chromedriver/chromedriver-2.10.zip#md5=170cd90ac0425dfea90480e5632c9ac1 (from https://pypi.python.org/simple/chromedriver/), version: 2.10
+    Found link https://pypi.python.org/packages/source/c/chromedriver/chromedriver-2.11.zip#md5=f5460cdb5645a384b40d216c396e58ca (from https://pypi.python.org/simple/chromedriver/), version: 2.11
+    Found link https://pypi.python.org/packages/source/c/chromedriver/chromedriver-2.12.zip#md5=54740f29120e364af63c836938457be3 (from https://pypi.python.org/simple/chromedriver/), version: 2.12
+    Found link https://pypi.python.org/packages/source/c/chromedriver/chromedriver-2.13.zip#md5=86471a1b211f24af25960abdad1c427a (from https://pypi.python.org/simple/chromedriver/), version: 2.13
+    Found link https://pypi.python.org/packages/source/c/chromedriver/chromedriver-2.14.1.zip#md5=3e508b1e6366810642b2790434a4dddb (from https://pypi.python.org/simple/chromedriver/), version: 2.14.1
+    Found link https://pypi.python.org/packages/source/c/chromedriver/chromedriver-2.14.zip#md5=6135a1e709457b6a1e9615ff7bd33154 (from https://pypi.python.org/simple/chromedriver/), version: 2.14
+  Using version 2.14.1 (newest of versions: 2.14.1, 2.14, 2.13, 2.12, 2.11, 2.10)
+  Downloading chromedriver-2.14.1.zip
+  Downloading from URL https://pypi.python.org/packages/source/c/chromedriver/chromedriver-2.14.1.zip#md5=3e508b1e6366810642b2790434a4dddb (from https://pypi.python.org/simple/chromedriver/)
+  Running setup.py (path:/tmp/pip_build_root/chromedriver/setup.py) egg_info for package chromedriver
+    running egg_info
+    creating pip-egg-info/chromedriver.egg-info
+    writing pip-egg-info/chromedriver.egg-info/PKG-INFO
+    writing top-level names to pip-egg-info/chromedriver.egg-info/top_level.txt
+    writing dependency_links to pip-egg-info/chromedriver.egg-info/dependency_links.txt
+    writing entry points to pip-egg-info/chromedriver.egg-info/entry_points.txt
+    writing manifest file 'pip-egg-info/chromedriver.egg-info/SOURCES.txt'
+    warning: manifest_maker: standard file '-c' not found
+    
+    reading manifest file 'pip-egg-info/chromedriver.egg-info/SOURCES.txt'
+    writing manifest file 'pip-egg-info/chromedriver.egg-info/SOURCES.txt'
+  Source in /tmp/pip_build_root/chromedriver has version 2.14.1, which satisfies requirement chromedriver
+Installing collected packages: chromedriver
+  Running setup.py install for chromedriver
+    Running command /usr/bin/python -c "import setuptools, tokenize;__file__='/tmp/pip_build_root/chromedriver/setup.py';exec(compile(getattr(tokenize, 'open', open)(__file__).read().replace('\r\n', '\n'), __file__, 'exec'))" install --record /tmp/pip-z3uZl6-record/install-record.txt --single-version-externally-managed --compile
+    running install
+    Downloading CHROMEDRIVER
+    error: <urlopen error [Errno 101] Network is unreachable>
+    Complete output from command /usr/bin/python -c "import setuptools, tokenize;__file__='/tmp/pip_build_root/chromedriver/setup.py';exec(compile(getattr(tokenize, 'open', open)(__file__).read().replace('\r\n', '\n'), __file__, 'exec'))" install --record /tmp/pip-z3uZl6-record/install-record.txt --single-version-externally-managed --compile:
+    running install
+
+Downloading CHROMEDRIVER
+
+error: <urlopen error [Errno 101] Network is unreachable>
+
+----------------------------------------
+Cleaning up...
+  Removing temporary dir /tmp/pip_build_root...
+Command /usr/bin/python -c "import setuptools, tokenize;__file__='/tmp/pip_build_root/chromedriver/setup.py';exec(compile(getattr(tokenize, 'open', open)(__file__).read().replace('\r\n', '\n'), __file__, 'exec'))" install --record /tmp/pip-z3uZl6-record/install-record.txt --single-version-externally-managed --compile failed with error code 1 in /tmp/pip_build_root/chromedriver
+Exception information:
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/pip/basecommand.py", line 122, in main
+    status = self.run(options, args)
+  File "/usr/lib/python2.7/dist-packages/pip/commands/install.py", line 283, in run
+    requirement_set.install(install_options, global_options, root=options.root_path)
+  File "/usr/lib/python2.7/dist-packages/pip/req.py", line 1435, in install
+    requirement.install(install_options, global_options, *args, **kwargs)
+  File "/usr/lib/python2.7/dist-packages/pip/req.py", line 706, in install
+    cwd=self.source_dir, filter_stdout=self._filter_install, show_stdout=False)
+  File "/usr/lib/python2.7/dist-packages/pip/util.py", line 697, in call_subprocess
+    % (command_desc, proc.returncode, cwd))
+InstallationError: Command /usr/bin/python -c "import setuptools, tokenize;__file__='/tmp/pip_build_root/chromedriver/setup.py';exec(compile(getattr(tokenize, 'open', open)(__file__).read().replace('\r\n', '\n'), __file__, 'exec'))" install --record /tmp/pip-z3uZl6-record/install-record.txt --single-version-externally-managed --compile failed with error code 1 in /tmp/pip_build_root/chromedriver

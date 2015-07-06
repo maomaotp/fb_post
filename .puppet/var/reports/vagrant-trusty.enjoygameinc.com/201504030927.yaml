@@ -1,0 +1,368 @@
+--- !ruby/object:Puppet::Transaction::Report
+  metrics: 
+    resources: !ruby/object:Puppet::Util::Metric
+      name: resources
+      label: Resources
+      values: 
+        - - total
+          - Total
+          - 11
+        - - skipped
+          - Skipped
+          - 0
+        - - failed
+          - Failed
+          - 0
+        - - failed_to_restart
+          - "Failed to restart"
+          - 0
+        - - restarted
+          - Restarted
+          - 0
+        - - changed
+          - Changed
+          - 0
+        - - out_of_sync
+          - "Out of sync"
+          - 1
+        - - scheduled
+          - Scheduled
+          - 0
+    time: !ruby/object:Puppet::Util::Metric
+      name: time
+      label: Time
+      values: 
+        - - schedule
+          - Schedule
+          - 0.000471815
+        - - package
+          - Package
+          - 0.00020516
+        - - file
+          - File
+          - 0.081221972
+        - - service
+          - Service
+          - 0.055913147
+        - - filebucket
+          - Filebucket
+          - 6.1828e-05
+        - - config_retrieval
+          - "Config retrieval"
+          - 0.396309105
+        - - total
+          - Total
+          - 0.534183027
+    changes: !ruby/object:Puppet::Util::Metric
+      name: changes
+      label: Changes
+      values: 
+        - - total
+          - Total
+          - 0
+    events: !ruby/object:Puppet::Util::Metric
+      name: events
+      label: Events
+      values: 
+        - - total
+          - Total
+          - 1
+        - - failure
+          - Failure
+          - 0
+        - - success
+          - Success
+          - 0
+        - - noop
+          - Noop
+          - 1
+  logs: 
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+        - file
+        - default
+        - class
+      message: "current_value {md5}b39e688c18bcb1fc89901bdbcfff295f, should be {md5}0c31dc24ddb59e7e6660ebf852038b3c (noop)"
+      source: /Stage[main]/Main/File[default]/content
+      time: 2015-04-03 09:27:46.529613 +00:00
+      file: /workspace/ops-puppet/nginx.pp
+      line: 25
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+        - completed_class
+        - main
+      message: "Would have triggered 'refresh' from 1 events"
+      source: Class[Main]
+      time: 2015-04-03 09:27:46.603857 +00:00
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+        - completed_stage
+        - main
+      message: "Would have triggered 'refresh' from 1 events"
+      source: Stage[main]
+      time: 2015-04-03 09:27:46.604870 +00:00
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+      message: "Finished catalog run in 0.17 seconds"
+      source: Puppet
+      time: 2015-04-03 09:27:46.608344 +00:00
+  resource_statuses: 
+    Schedule[daily]: !ruby/object:Puppet::Resource::Status
+      resource: Schedule[daily]
+      file: 
+      line: 
+      evaluation_time: 9.73e-05
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - schedule
+        - daily
+      time: 2015-04-03 09:27:46.441687 +00:00
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: Schedule
+      title: daily
+      skipped: false
+      failed: false
+      containment_path: 
+        - Schedule[daily]
+    Schedule[monthly]: !ruby/object:Puppet::Resource::Status
+      resource: Schedule[monthly]
+      file: 
+      line: 
+      evaluation_time: 4.1002e-05
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - schedule
+        - monthly
+      time: 2015-04-03 09:27:46.441897 +00:00
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: Schedule
+      title: monthly
+      skipped: false
+      failed: false
+      containment_path: 
+        - Schedule[monthly]
+    Schedule[hourly]: !ruby/object:Puppet::Resource::Status
+      resource: Schedule[hourly]
+      file: 
+      line: 
+      evaluation_time: 0.000154011
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - schedule
+        - hourly
+      time: 2015-04-03 09:27:46.442186 +00:00
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: Schedule
+      title: hourly
+      skipped: false
+      failed: false
+      containment_path: 
+        - Schedule[hourly]
+    Package[nginx]: !ruby/object:Puppet::Resource::Status
+      resource: Package[nginx]
+      file: /workspace/ops-puppet/nginx.pp
+      line: 6
+      evaluation_time: 0.00020516
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - package
+        - nginx
+        - class
+      time: 2015-04-03 09:27:46.463460 +00:00
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: Package
+      title: nginx
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - Main
+        - Package[nginx]
+    File[default]: !ruby/object:Puppet::Resource::Status
+      resource: File[default]
+      file: /workspace/ops-puppet/nginx.pp
+      line: 25
+      evaluation_time: 0.067060413
+      change_count: 0
+      out_of_sync_count: 1
+      tags: 
+        - file
+        - default
+        - class
+      time: 2015-04-03 09:27:46.463878 +00:00
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: content
+          previous_value: "{md5}b39e688c18bcb1fc89901bdbcfff295f"
+          desired_value: "{md5}0c31dc24ddb59e7e6660ebf852038b3c"
+          historical_value: 
+          message: "current_value {md5}b39e688c18bcb1fc89901bdbcfff295f, should be {md5}0c31dc24ddb59e7e6660ebf852038b3c (noop)"
+          name: !ruby/sym content_changed
+          status: noop
+          time: 2015-04-03 09:27:46.529526 +00:00
+      out_of_sync: true
+      changed: false
+      resource_type: File
+      title: default
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - Main
+        - File[default]
+    Service[nginx]: !ruby/object:Puppet::Resource::Status
+      resource: Service[nginx]
+      file: /workspace/ops-puppet/nginx.pp
+      line: 31
+      evaluation_time: 0.055913147
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - service
+        - nginx
+        - class
+      time: 2015-04-03 09:27:46.532201 +00:00
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: Service
+      title: nginx
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - Main
+        - Service[nginx]
+    Schedule[never]: !ruby/object:Puppet::Resource::Status
+      resource: Schedule[never]
+      file: 
+      line: 
+      evaluation_time: 0.000100499
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - schedule
+        - never
+      time: 2015-04-03 09:27:46.588450 +00:00
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: Schedule
+      title: never
+      skipped: false
+      failed: false
+      containment_path: 
+        - Schedule[never]
+    File[nginx.conf]: !ruby/object:Puppet::Resource::Status
+      resource: File[nginx.conf]
+      file: /workspace/ops-puppet/nginx.pp
+      line: 16
+      evaluation_time: 0.014161559
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - file
+        - nginx.conf
+        - class
+      time: 2015-04-03 09:27:46.588750 +00:00
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: File
+      title: nginx.conf
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - Main
+        - File[nginx.conf]
+    Filebucket[puppet]: !ruby/object:Puppet::Resource::Status
+      resource: Filebucket[puppet]
+      file: 
+      line: 
+      evaluation_time: 6.1828e-05
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - filebucket
+        - puppet
+      time: 2015-04-03 09:27:46.603118 +00:00
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: Filebucket
+      title: puppet
+      skipped: false
+      failed: false
+      containment_path: 
+        - Filebucket[puppet]
+    Schedule[weekly]: !ruby/object:Puppet::Resource::Status
+      resource: Schedule[weekly]
+      file: 
+      line: 
+      evaluation_time: 4.3309e-05
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - schedule
+        - weekly
+      time: 2015-04-03 09:27:46.603270 +00:00
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: Schedule
+      title: weekly
+      skipped: false
+      failed: false
+      containment_path: 
+        - Schedule[weekly]
+    Schedule[puppet]: !ruby/object:Puppet::Resource::Status
+      resource: Schedule[puppet]
+      file: 
+      line: 
+      evaluation_time: 3.5694e-05
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - schedule
+        - puppet
+      time: 2015-04-03 09:27:46.603389 +00:00
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: Schedule
+      title: puppet
+      skipped: false
+      failed: false
+      containment_path: 
+        - Schedule[puppet]
+  host: vagrant-trusty.enjoygameinc.com
+  time: 2015-04-03 09:27:46.017408 +00:00
+  kind: apply
+  report_format: 4
+  puppet_version: "3.4.3"
+  configuration_version: 1428053265
+  transaction_uuid: "558a1c96-f546-4496-8077-98819107a53e"
+  environment: production
+  status: unchanged
